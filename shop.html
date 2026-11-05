@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <nav>
+        <h2>Books</h2>
+
+        <ul>
+            <li><a href="home.html">Ballina</a></li>
+            <li><a href="shop.html">Librat</a></li>
+            <li><a href="#">Autorët</a></li>
+            <li><a href="#">Kategoritë</a></li>
+            <li><a href="#">Kontakti</a></li>
+        </ul>
+
+        <button><a href="login.html">LogIn</a></button>
+    </nav>
+
+
+    <div id="divikryesor">
+
+        <div class="karta">
+            <img src="" alt="">
+            <h4>Prilli i Thyer</h4>
+            <p>Autori: Ismail Kadare</p>
+            <p>Cmimi: 15 euro</p>
+            <button id="btn1" onclick="porosit('Prilli i Thyer', '15 euro')">Porosit</button>
+        </div>
+
+          <div class="karta">
+            <img src="" alt="">
+            <h4>Kronike ne Gur</h4>
+            <p>Autori: Ismail Kadare</p>
+            <p>Cmimi: 20 euro</p>
+            <button id="btn2" onclick="porosit('Kronike ne Gure','20 euro')">Porosit</button>
+        </div>
+
+        <div class="karta">
+            <img src="" alt="">
+            <h4>Gjenerali i Ushtris se Vdekur</h4>
+            <p>Autori: Ismail Kadare</p>
+            <p>Cmimi: 25 euro</p>
+            <button id="btn3" onclick="porosit('Gjenerali i Ushtris se Vdekur','25 euro')">Porosit</button>
+        </div>
+    </div>
+
+    <div id="div2">
+          <h3>Porosia e juaj</h3>
+          <p id="p1"></p>
+          <p id="p2"></p>
+
+          <button id="btn4" onclick="alert('Porosia e juaj u krye me sukses')">Konfirmo porosin</button>
+    </div>
+
+
+
+    <script>
+
+      let cmimitotal=0;
+
+       function porosit(libri,cmimi){
+
+        let cmiminumber=parseFloat(cmimi);
+
+        cmimitotal=cmimitotal+cmiminumber;
+
+        let porosia= libri+ " : "+ cmimi;
+
+
+
+        document.getElementById('div2').style.display='block';
+        document.getElementById('p1').innerHTML+=porosia +'<br>';
+        document.getElementById('p2').innerHTML="Totali per pages eshte "+ cmimitotal +' euro';
+
+
+
+
+       }
+    </script>
+</body>
+</html>
